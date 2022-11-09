@@ -2,7 +2,11 @@
     padding: 0;
     margin: 0;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 header{
     background-color:antiquewhite;
     width: 100%;
@@ -61,6 +65,22 @@ main{
     width: 80%;
     height: 60%;
     background-color: chartreuse;
+    animation: acorden 2s infinite;
+    animation-play-state: paused;
+}
+.main__slider:hover{
+    animation-play-state: running;
+}
+@keyframes acorden{
+    0%{
+        width: 10%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 10%;
+    }
 }
 
 .main__footer{
@@ -69,12 +89,24 @@ main{
     background-color: cornflowerblue;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .main__miniimagen{
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     background-color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen{
+    width: 90%;
+    height: 90%;
+    background-color: beige;
+
+}
+.main__miniimagen h3{
+    position: relative;
+    bottom:100px;
+    right: 50px;
 }
